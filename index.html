@@ -9,16 +9,110 @@
 body {
   margin: 0;
   font-family: system-ui, -apple-system, sans-serif;
+  color: #222;
+  background: #fff;
+  line-height: 1.6;
 }
 
 header {
   padding: 16px 24px;
   border-bottom: 1px solid #eee;
+  background: #fff;
 }
 
-h1 {
+header h1 {
   margin: 0;
   font-size: 20px;
+}
+
+header p {
+  margin: 8px 0 0;
+}
+
+.hero {
+  background: #f5f7fa;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 48px 20px;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h2 {
+  margin: 0 0 12px;
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.hero-lead {
+  margin: 0 auto 16px;
+  font-size: 18px;
+  max-width: 760px;
+}
+
+.hero-desc {
+  margin: 0 auto;
+  max-width: 760px;
+  color: #444;
+}
+
+.hero-buttons {
+  margin-top: 28px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #e5e7eb;
+  color: #222;
+}
+
+.agenda {
+  padding: 36px 20px 28px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.agenda-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.agenda h3 {
+  margin: 0 0 16px;
+  font-size: 24px;
+}
+
+.agenda p {
+  margin: 0 0 14px;
+  color: #444;
+}
+
+.agenda ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.agenda li {
+  margin-bottom: 8px;
 }
 
 .pdf-container {
@@ -38,11 +132,47 @@ iframe {
 <header>
   <h1>DFMPro ユーザーガイド</h1>
   <p>
-    <a href="DFMProUserGuide.pdf" target="_blank">
-      PDFを別タブで開く
-    </a>
+    <a href="DFMProUserGuide.pdf" target="_blank">PDFを別タブで開く</a>
   </p>
 </header>
+
+<section class="hero">
+  <div class="hero-inner">
+    <h2>DFMPro ユーザーガイド</h2>
+    <p class="hero-lead">
+      DFMPro for Creo Parametric の機能と操作方法を解説するユーザーガイドです。
+    </p>
+    <p class="hero-desc">
+      DFMProは、CAD設計段階で製造性（Manufacturability）を評価し、
+      加工・成形・組立における問題を早期に発見するための支援ツールです。
+      本ガイドでは、基本操作、Rule Manager、解析実行、結果確認、設定項目までを段階的に解説します。
+    </p>
+
+    <div class="hero-buttons">
+      <a class="btn btn-primary" href="DFMProUserGuide.pdf" target="_blank">PDFを見る</a>
+      <a class="btn btn-secondary" href="DFMProUserGuide.pdf" download>PDFをダウンロード</a>
+    </div>
+  </div>
+</section>
+
+<section class="agenda">
+  <div class="agenda-inner">
+    <h3>本ガイドの内容</h3>
+    <p>
+      本書では、DFMProの基本的な使い方から詳細設定、レポート確認まで、実務で必要になる主要機能をまとめています。
+    </p>
+    <ul>
+      <li>DFMPro の概要</li>
+      <li>ユーザーインターフェースの基本操作</li>
+      <li>Rule Manager の操作と各種データベース設定</li>
+      <li>DFMルールチェックの実行方法</li>
+      <li>製造プロセス別の入力設定と解析</li>
+      <li>DFX / Cost / DFX Server の結果確認</li>
+      <li>レポート出力、インポート / エクスポート、各種設定</li>
+      <li>トラブルシューティング</li>
+    </ul>
+  </div>
+</section>
 
 <div class="pdf-container">
   <iframe src="DFMProUserGuide.pdf"></iframe>
