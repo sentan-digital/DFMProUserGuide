@@ -1,0 +1,79 @@
+body {
+  font-family:
+    "Noto Sans JP",
+    "Segoe UI",
+    "Yu Gothic UI",
+    "Meiryo",
+    sans-serif;
+  font-size: 15pt;
+  line-height: 1.7;
+  color: #000;
+}
+
+p {
+  margin-top: 0.6em;
+  margin-bottom: 0.8em;
+}
+
+/* 見出し */
+h1, h2, h3 {
+  font-family:
+    "Noto Sans JP",
+    "Segoe UI",
+    "Yu Gothic UI",
+    "Meiryo",
+    sans-serif;
+  font-weight: 600;
+}
+
+
+
+/* 見出し */
+h1 {
+  background: #1e6bd6;
+  color: white;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+
+h2 {
+  background: #e8f0ff;
+  padding: 6px 10px;
+  border-left: 5px solid #1e6bd6;
+}
+
+/* 箇条書き */
+ul {
+  margin-left: 1.2em;
+}
+
+
+
+.compat-table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+.compat-table th,
+.compat-table td {
+  border: 1px solid #333;
+  padding: 8px 12px;
+}
+
+.compat-table th {
+  background-color: #f0f0f0;
+  text-align: left;
+  font-weight: 600;
+}
+
+h6 {
+  color: #800020;        /* エンジ色（Maroon） */
+  padding-left: 2em;    /* ← 字下げ幅（あとで調整） */
+}
+
+
+hr {
+  border-top: 1px solid #800020;
+}

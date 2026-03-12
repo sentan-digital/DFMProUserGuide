@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-size: 9pt; margin: 0; }
+    .line { border-top: 1px solid #999; margin-top: 2mm; }
+    table { width: 100%; border-collapse: collapse; }
+    td { padding-top: 2mm; }
+    .right { text-align: right; }
+  </style>
+</head>
+<body>
+  <br>
+  <div class="line"></div>
+  <table>
+    <tr>
+      <td><p>先端技研株式会社　　発行日：2026年1月28日</p></td>
+      <td class="right">
+        <span class="page"></span> / <span class="topage"></span>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    // wkhtmltopdf passes variables via query string
+    (function () {
+      var vars = {};
+      var qs = document.location.search.substring(1).split('&');
+      for (var i = 0; i < qs.length; i++) {
+        var kv = qs[i].split('=', 2);
+        vars[kv[0]] = decodeURIComponent(kv[1] || '');
+      }
+      var els = document.getElementsByClassName('page');
+      for (var j = 0; j < els.length; j++) els[j].textContent = vars.page || '';
+      els = document.getElementsByClassName('topage');
+      for (j = 0; j < els.length; j++) els[j].textContent = vars.topage || '';
+    })();
+  </script>
+</body>
+</html>
